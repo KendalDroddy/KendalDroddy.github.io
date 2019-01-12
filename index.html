@@ -1,1 +1,78 @@
-Hello World
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <title>CS 373</title>
+    <link href="http://allfont.net/allfont.css?fonts=futura-bold" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <!-- Body -->
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar-light" style="background-color: #791F62;border-bottom: 5px solid #D39328;">
+          <p class="nav-title text-white">CS 373</p>
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#races">Week 1</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+      <!-- Races Heading -->
+      <div class="container-fluid" id="races">
+        <div class="row text-white race-heading">
+          <div class="col-lg-12">
+            <span>WEEK ONE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Races Content-->
+      <div class="container-fluid" id="race-bg">
+        <div class="row">
+          <div class="col-lg-12 race-content">
+            <h3 class="section-header">Basics of Malware</h3>
+            <p class="text-justify">The word malware is a concatenation of the individual words 'malicious' and 'software'. This term encompasses a wide variety of software, all of which has malicious end goals. In contrast to software a user would knowingly install on their device, malware is placed on a device through deceptive, and sometimes illegal methods. So, what is the driving factor behind this type of behavior?</p>
+            <p class="text-justify">There are quite a few motivating factors behind malware. The most common is for financial gain. Data breaches containing user info as well as credit card numbers and credentials is, unfortunately, a regular occurrence. Aside from attacks at the corporate level, malware can be targeted at individual credit card readers such as at a gas station pump or ATM machine. This reinforces the need to be educated about how malware works and how to detect it. Other motivating factors include political purposes, other forms of organized crime, and even research or experimentation just to see how a system can be exploited.</p>
+            <p class="text-justify">Multiple categories of malware exist including:
+            <ul>
+              <li>Viruses</a></li>
+              <li>Trojans</a></li>
+              <li>Potentially Unwanted Software (PUP)</li>
+            </ul> 
+            A <strong>virus</strong> is considered parasitic - it is dependent upon another file in the user's system. This 'host' must then be executed which serves as a trigger for the virus to also executed. More advanced viruses can also be of the <strong>polymorphic</strong> variety. This means that their code is constantly changing. The result is a virus that is very difficult to pinpoint, analyze, and kill because it is always found in varied states.</p>
+            <p>A <strong>Trojan</strong> is a form of malicious software named after the Trojan horse of Greek mythology. Look up the story to learn more - but essentially the Trojan disguises itself as something else in order to gain access to the user's system. The Trojan may look like a useful application, a game, any other number of things a user would be open to downloading. In an ironic manner, Trojans may even be disguised as anti-virus software! Once the user's system is breached, a Trojan can log the system's keystrokes, hold the device ransom for money, or use the system as a bot.</p>
+            <p class="text-justify">A <strong>Potentially Unwanted Program (PUP)</strong>is something that the user likely gave consent to download even though its something they don't actually want. In some cases they downloaded another program and in the process, gave consent for that program to add the PUP to their device. Two common PUPs come in the form of <strong>adware</strong> and <strong>spyware</strong>.Adware monitors the user's activity in order to target advertisements specifically tailored to their interests. Spyware similarly monitors activity, but it uses this information for purposes broader than advertising.</p>
+            <p class="text-justify">Understanding these forms of malware and how they work is the first key to defending against them. The next step is to actually examine live malware samples in a lab environment to gain hands on experience with their behaviors and tendencies. Several tips are provided for doing just that. First, malware samples should be transported in an inactive state. If the sample uses a specific file extension, then rename it until it is ready to use. Second, the testing environment should be completely locked down. This could include the use of anti-malware programs, firewalls, and specific policies to protect the environment. Lastly, be ready to completely disconnect from internet at a moment's notice. 
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="row py-3 mx-0 footer">
+        <div class="col-md-12 text-center">
+          <small>&copy; Kendal Droddy</small>
+        </div>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

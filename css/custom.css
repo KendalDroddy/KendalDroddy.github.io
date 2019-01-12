@@ -1,0 +1,145 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1680px;
+  margin: auto;
+  /*letter-spacing: 1px;*/
+}
+
+/*------ Nav & Top-Span ------*/
+.sticky-top {
+  background-color: #791F62;
+}
+
+.nav-title {
+  padding-top: 15px;
+  font-family: "Futura-Bold", sans-serif;
+  font-size: 1.3rem;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.top-span {
+  color: #D39328;
+  font-family: "Futura-Bold", sans-serif;
+  font-size: 1.2rem;
+  margin-left:30px;
+  padding-top: 15px;
+  margin-bottom: -5px;
+}
+
+.navbar-light .navbar-toggler {
+  color: #D39328;
+  border-color: #D39328;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(211, 147, 40, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #D39328;
+} 
+
+.nav-link {
+  border-right: 3px solid #D39328;
+  font-family: "Futura-Bold", sans-serif;
+  color: #D39328 !important;
+}
+
+.nav-link:hover {
+  background-color: white;
+}
+
+/*----- Section Headers -----*/
+.section-header {
+  font-size: 1.5rem;
+  color: navy;
+  font-family: "Futura-Bold", sans-serif;
+}
+
+/*----- Races -----*/
+.race-heading {
+  padding-left: 3%;
+  background-color: rgb(142,167,202);
+  font-family: "Futura-Bold", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 5px;
+}
+
+.race-content {
+  margin: 2% auto;
+  font-size: 1.5rem;
+  font-family: "Brown Std";
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#race-bg {
+  background-color: #DDE4EF;
+  margin-bottom: 5px;
+}
+
+/*----- Footer -----*/ 
+.footer {
+  bottom: 0;
+  width: 100%;
+  color: #D39328;
+  border-top: solid 5px #D39328;
+  background-color: #791F62;
+  font-family: "Futura-Bold", sans-serif;
+  font-size: 1.325rem;
+}
+
+
+
+@media (max-width: 991px)
+{
+  .crit-text {
+    font-size: 1.25rem;
+  }
+  .race-heading, .event-heading, .fw-heading, .giving-heading, .contact-heading {
+    font-size: 3.00rem;
+  }
+
+  .race-content, .event-content, .fondo-content, .fw-content, .giving-content, .contact-content {
+    font-size: 1.1rem;
+  }
+
+  .section-header {
+    font-size: 1.3rem;
+  }
+  .nav-link {
+    font-size: .80rem;
+  }
+  .register-btn {
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 576px)
+{
+  .nav-link {
+    border-right: none;
+  }
+  .race-heading, .event-heading, .fw-heading, .giving-heading, .contact-heading {
+    font-size: 2.50rem;
+  }
+
+  .race-content, ,.event-content, .fondo-content, .fw-content, .giving-content, .contact-content {
+    font-size: .9rem;
+  }
+
+  .section-header {
+    font-size: 1.1rem;
+  }
+
+  .top-span {
+    font-size: 1.0rem;
+  }
+}
