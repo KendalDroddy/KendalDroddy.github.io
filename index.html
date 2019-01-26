@@ -30,11 +30,14 @@
               <li class="nav-item">
                 <a class="nav-link" href="#week2">Week 2</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#week3">Week 3</a>
+              </li>
             </ul>
           </div>
         </nav>
       
-      <!-- Races Heading -->
+      <!-- Week One Heading -->
       <div class="container-fluid" id="races">
         <div class="row text-white race-heading">
           <div class="col-lg-12">
@@ -43,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Races Content-->
+      <!-- Week One Content-->
       <div class="container-fluid" id="race-bg">
         <div class="row">
           <div class="col-lg-12 race-content">
@@ -64,7 +67,7 @@
         </div>
       </div>
 
-      <!-- Races Heading -->
+      <!-- Week Two Heading -->
       <div class="container-fluid" id="week2">
         <div class="row text-white race-heading">
           <div class="col-lg-12">
@@ -73,7 +76,7 @@
         </div>
       </div>
 
-      <!-- Races Content-->
+      <!-- Week Two Content-->
       <div class="container-fluid" id="race-bg">
         <div class="row">
           <div class="col-lg-12 race-content">
@@ -110,6 +113,45 @@
           </div>
         </div>
       </div>
+
+      <!-- Week Three Heading -->
+      <div class="container-fluid" id="week3">
+        <div class="row text-white race-heading">
+          <div class="col-lg-12">
+            <span>WEEK THREE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week Three Content-->
+      <div class="container-fluid" id="race-bg">
+        <div class="row">
+          <div class="col-lg-12 race-content">
+            <h3 class="section-header">Malware Defense</h3>
+            <p class="text-justify">The previous week's lectures supplied us with a great deal of information about malware. Topics ranged from an overview of malware and what it does, to a deeper understanding of malware including how it should be handled and analyzed. This week we shifted gears a bit. Understanding malware is great, but now that we know what it does and how it acts, what can we do to defend against it?</p>
+            <p class="text-justify">The question seems simple at first but its apparent that there is no one-size-fits-all solution to this problem. We've already learned that there are millions upon millions of malicious attacks floating about the web. It's not possible to stop or even defend against everything. However, one step we can take to assist in this is to place malware under four broad umbrellas that characterize their execution. In order, these steps are:
+              <ul>
+                <li>First Contact</li>
+                <li>Local Execution</li>
+                <li>Establish Presence</li>
+                <li>Harvest Information</li>
+              </ul>
+            Step one is pretty straightforward. First contact is the means by which the user is initially exposed to malicious software. This takes a variety of forms but most commonly includes email or instant messages, misuse of physical media, or even poisoned search results. Looking more closely at the email example - most companies have policies in place to protect their users from malicious emails. This often includes training on how to identify and handle suspicious emails. But there's always a case where a curious user opens an untrusted email or even downloads an attachment from a suspicous email.</p>
+            <p>By doing so, the user has fallen prey to the malware's first contact. The malware was opened and is now moved to the second stage - local execution. Sometimes this may happen automatically. But sometimes it may require the user to perform an extra step. Maybe the malware tricks the user into running an executable. Regardless of the method, this stage is when the malware executes the malicous portion of its code.</p>
+            <p class="text-justify">Once acquired, the evidence must then be carefully disected and investigated. The investigator must be equipped with a variety of tools and know how to use each of them to understand the data being examined. Hands-on examples were given in class allowing us to utilize tools such as FTK Imager to examine data. Another key aspect of investigation is to form a very accurate timeline of events. This can be done by diggint into time stamps or system logs and is very helpful is reconstructing a malwre attack. It can also be useful for triage. That is, proving the same conclusion in multiple different ways. By developing an accurate timeline, it is much easier to prove certain events and disprove others.</p>
+            <p>Lastly, the evidence must be reported. While some investigators have transitioned to electronic means for reporting, this is largely still done with paper and pen. Again, noting the time of specific events is key for reporting. This ensures that no doubt remains as to what happened and when. It is also important to communicate clearly in the report. Many times very technical terms and events will need to be explained to people, possibly a judge or jury, with little to no technical background. Everything must be explained in a way that they can understand.</p>
+            <p class="text-justify">There's one more concept that should be noted this week and that is the <strong>order of volatility</strong>. This refers to the specific order in which data and evidence should be collected. By volatile I mean the least stable - the evidence that is most likely to become corrupted, be lost on the network, or even erased from a hard drive never to be seen again. Taken from Darril Gibson's Security+ book, the order of volatitiy is as follows:
+              <ul>
+                <li>Data in cache memory</li>
+                <li>Data in RAM</li>
+                <li>A paging file</li>
+                <li>Data stored on local disk drives</li>
+                <li>Logs stored on remote systems</li>
+                <li>Archive media</li>
+              </ul>
+            This list is shown in order of decreasing volatility. An investigator should start by gathering data from the top of the list and then proceed down.</p>
+          </div>
+        </di
 
       <!-- Footer -->
       <div class="row py-3 mx-0 footer">
