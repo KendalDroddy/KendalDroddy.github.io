@@ -36,6 +36,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#week4">Week 4</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#week5">Week 5</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -168,6 +171,31 @@
             <p class="text-justify">The first type of attack discussed in class was the <strong>buffer overflow</strong>. An overflow occurs when a system application receives more data than it is capable of properly handling. The excess data spills out essentially, and the result is that the system's memory is exposed. In this attack, the buffer refers to the memory that the application normally has access to. The overflow references the memory that is outside of this application's own scope, which is now completely exposed. At this point, the exposed memory is only classified as a vulnerability. It is not until the attacker does something malicious with it that it becomes an exploit.</p>
             <p class="text-justify">The buffer overflow attack can be broken down into several steps. In the example in class this begins with crash triage. The main things to find out here are what do we control and where are we in the execution of the code. Essentially this is figuring out the vulnerability - how was the crash caused and how can it be repeated and exploited. Next, we need to find out the return address offset. This lets us know how many bytes we have to work with. We can then position our shell code. <strong>Shell code</strong> is what we call the specific set of instructions that we craft and inject into the application - it is the executable portion of this attack. Now just because the shell code is placed in memory doesn't mean it will automatically trigger. This brings up the last step which is finding the address of the shell code. Several techniques are described in detail to get us to the shell code. Once there, the code executes and the calculator pops up! Of course, in the real world something much more nefarious would likely happen!</p>
             <p class="text-justify">The second attack described is called <strong>use after free</strong>. I won't go into as much detail because it's similar in concept to the previous attack. The main difference is that this attack targets the heap, while the previous attack targets the stack. In use after free, first an object must be freed from memory. This freed object is now replaced with an object of our own. Special care must be taken here to ensure the object is the same size as that which was freed. The shell code is then positioned and the ojbect is used again, triggering the shell code.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week Five Heading -->
+      <div class="container-fluid" id="week5">
+        <div class="row text-white race-heading">
+          <div class="col-lg-12">
+            <span>WEEK FIVE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week Four Content -->
+      <div class="container-fluid" id="race-bg">
+        <div class="row">
+          <div class="col-lg-12 race-content">
+            <h3 class="section-header">Windows Memory Manipulation</h3>
+            <p class="text-justify">This week our attention turns to memory manipulation in Windows machines. It is sometimes the case that attackers will use hidden files to exploit a machine. So this week's goals are twofold:
+              <ul>
+                <li>Understand the concepts of stealth by means of memory manipulation.</li>
+                <li>Debug and explore various stealth techniques</li>
+              </ul>
+              The first topic discussed was kernel memory. Several key points were made here. First, kernel memory is a flat memory model with no security operations. If an attacker can get to that level of memory then the defender has no advantage - they are fighting on the same plane. Next, any kernel can access and part of memory. This makes access to the kernel very appealing and powerful. And lastly, the kernel as a whole is comprised of the Windows kernel and the driver. At this point we also took a brief look at <strong>hooking</strong>. Let's say we have two machines, A & B, with A sending packets to B. An attacker then hooks into this data stream, filters the contents, takes what they are seeking and sends that data to a new, separate machine, and then let's the remaining data pass through.</p>
+              <p class="text-justify">Understanding kernel memory manipulation also requires an understanding of threads and how they work. Simply put, a <strong>thread</strong> is the smallest unit of execution within an operating system. Different applications may have multiple jobs that need to be processed. These can be broken down into individual processes, each with its own thread. The thread scheduler then loads these jobs into the CPU, prioritizes them, and executes the process. These processes can be examined using the <strong>Process Hacker</strong> tool as discussed in lecture. This allows the user to view all the current processes, the drivers or applications they are associated, and their individual permissions (read, write, and execute). These processes can be analyzed to see if malware is generating any new malicious processes. A clear indiciation that this is the case is when a private, unnamed processes is generated that has execute permissions.</p>
           </div>
         </div>
       </div>
