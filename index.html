@@ -343,7 +343,9 @@
             <img src="img/pic5.png" class="img-fluid">
             <p class="text-justify">The format is encoded but it’s not as specific as last time. So I do a search for POST request encryption and find out that it’s encrypted using base64. So, again, I quickly find a base64 decoder online, run the encrypted text through it, and get my key: <strong>AOUNW-DMNPJ-MIOEI-KUUYG-UMLLC.</strong></p>
             <p class="text-justify">At least I thought this was my key. I entered it in but it says my IP address is invalid so I’ll need to think this one over. So it’s possible that this didn’t work but I used an online tool to send the POST request. One security feature could be that the device used for the request and login attempts must be the same. To test this I sent a POST request from my terminal and received a response. I decoded it using base64 and received the key <strong>LGPQU-QOKSZ-SISGV-HOYBE-QIQFK</strong>  which is different from the previous code. I typed it into the page and gained access!</p>
-            <h3 class="section-header">Classic, Yet Complicated</h3>
+
+            <h3 class="section-header">Classic, Yet Complicated (10pts)</h3>
+
             <p class="text-justify">I'll be honest - scanning through the Hack the Box challenges at first felt a bit intimidating. After browsing a bit I ended up on the crypto challenges page. While I don't have much background here, cryptography is definitely an area of interst for me. So I scanned through and spotted this particular challenge: <strong>Classic, Yet Complicated</strong>. This title struck me because roughly two years ago, when I first started programming, I enrolled in Harvard's free CS50 course. In the course the instructor, David Malan, introduced us to two classic ciphers - the Caesar cipher and the Vigenere cipher. So I clicked on the challenge to get started.</p>
             <p class="text-justify">Just for background, a Caesar cipher is where each letter of the alphabet is shifted a set number of places down to a new letter. So if the shift is 2, then A would be C, C would be E, etc. A Vigenere cipher is a bit more complex. Instead of a single shift, the plaintext is encrypted utilizing a 26x26 table. Geeks for Geeks provides a good summary:
               <ul>
@@ -357,6 +359,45 @@
               <p class="text-justify">The top result I got utilized the key, "HELLOHORVD" and the resulting plaintext was almost readable. So I tried another option: "Try a common words dictionary attack". The top key that returned was "WORLD" but the plaintext was less readable than previously. So I decided to merge the two answers into "HELLOWORLD". This made sense because the first key was so close to this. Additionally, this is basically the first thing every single person learns when they start programming. Sure enough, I enter the key, run it again and get this result:</p>
               <code>the vigenere cipher, was invented by a frenchman, blaise de vigenere in the 16th century. it is a polyalphabetic cipher because it uses two or more cipher alphabets to encrypt the data. in other words, the letters in the vigenere cipher are shifted by different amounts, normally done using a word or phrase as the encryption key . unlike the monoalphabetic ciphers, polyalphabetic ciphers are not susceptible to frequency analysis, as more than one letter in the plaintext can be represented by a single letter in the encryption. the key is the flag.</code>
               <p class="text-justify">I returned to HTB, entered the key, and got my success message!</p>
+
+              <h3 class="section-header">Widescreen (20pts)</h3>
+
+              <p class="text-justify">I decided to check out a new category for my second challenge. Scanning thorugh the list - <stron>Steganography</stron> jumped out at me. Steganography is defined as the practice of concealing a file, message, or video within another file, message, image, or video. This is another topic that I was first exposed to in Harvard's CS50 course.</p>
+              <p class="text-justify">I looked through the Stego challenges and decided to try out Widescreen. I'm familiar enough with challenges to like these to know that clues to solving them are normally hinted at in the challenge title. My reasoning in choosing this challenge is that I have a 27" widescreen monitor that I use - plenty wide enough to possibly help me out with this challenge. So, I downloaded the zip file, opened it up and found the following image:</p>
+              <img src="img/pic7.png" class="img-fluid">
+              <p class="text-justify">The image itself somewhat surprised me. First, because I have no idea what movie this is actually from. And second, because of the massive black bar at the bottom. I thought about it and came up with two possible reasons for this. One - someone added this black bar to cover up that portion of the film slide. Or two - this isn't actually part of the film slide, but a black bar that was added that may contain some information needed to solve the challenge.</p>
+              <p class="text-justify">Given the title of this challenge, my first plan of attack involved stretching the image to the full width of my computer screen. I examined the image, and could make out, incredibly faintly, some other objects on the black bar. I turned my screen brightness all the way up but that didn't help too much. I still couldn't make out what I was looking at. One of my hobbies is photography - so my next thought was to invert the image colors. This is something I do with photos to check certain details or to ensure the exposure is where I want it - it's just a different way to view a picture. So I inverted the colors and got this creepy image:</p>
+              <img src="img/pic8.png" class="img-fluid">
+              <p class="text-justify">Again, I stretched the image out to the full width of my screen. I could notice some objects a little easier, but it was still hard to see. A stood up and looked at the image from all sorts of angles as well. That helped a bit - I can tell that the objects are letters or numbers but can't make anything out. I opened up the built-in editing tools and started playing with the images exposure and brightness settings. After adjusting a few sliders I got the following:</p>
+              <img src="img/pic9.png" class="img-fluid">
+              <p class="text-justify">I entered the text into HTB and submitted - it was the correct key!</p>
+
+              <h3 class="section-header">Sick Teacher (20pts)</h3>
+              <p class="text-justify">I jumped back to the Cryptography challenges because I spotted this one when I completed the 'Classic, Yet Complicated' challenge. Before switch careers to technology, I worked in education for three years including one year as a teacher. So I wanted to see what this challenge was about. I downloaded and unzipped the file to find the following text:</p>
+              <p><code>KBJICYP CZ KHLTIKWECD
+
+                KHLTIKWECD RWMI GBQW JCNW IBNW BM NHP CZ 2017. JBMLW IKWM, BI KHJ FYCRM QWYP VOBLTGP IC IKCOJHMSJ CZ NWNEWYJ ZYCN HGG CQWY IKW FGCEW.
+                IKW KHGG CZ ZHNW GBJIJ IKW ICA 100 OJWYJ BM CYSWY CZ ACBMIJ. HI IKW IBNW CZ RYBIBMF, IKW ICA 3 OJWYJ HYW JIWZHMC118, ZBGGBACJ HMS HKNWS.
+                IKWYW HYW JCNW ZCYONJ, H JKCOIECD HMS H JGHLT LKHMMWG. JGHLT HMS JKCOIECD HYW HRWJCNW, EOI IKW ZCYONJ MWWS JCNW GCQW! B RBJK NCYW AWCAGW OJWS IKWN.
+                KCAWZOGGP IKBJ BJ WMCOFK IWDI IC KWGA RBIK PCOY JOEJIBIOIBCM! FWI LYHLTBM! AJ SCM'I ZCYFWI IC JOAACYI KHLTIKWECD BZ PCO LHM JAHYW JCNW NCMWP. WQWYP AWMMP KWGAJ!
+
+                DCDC - HYYWDWG
+                ZGHF GCYWNBAJONSCGCYJBIHNWI</code>
+              </p>
+              <p class="text-justify">Unlike the previous challenges, nothing really struck me right away as to what this may be. I ran it through the Caesar and Vigenere cipher tools I recently found but neither of those produced anything useful. So I decided ot do some research on common ciphers and how to identify them. I ended up at an incredibly helpful page called <strong>Practical Cryptography</strong>. It laid out several common ciphers to be aware of including:
+                <ul>
+                  <li>Transposition Cipher</li>
+                  <li>Monoalphabetic Substituion Cipher</li>
+                  <li>Polyalphabetic Cipher</li>
+                  <li>Polygraphic Substitution Cipher</li>
+                </ul>
+              It also gave some great general tips for identifying and cracking an encrypted text. The first tip was for a transposition cipher. To determine if a cipher is created using transposition, the monogram frequency can be examined. This is simply the number of times each character appears in the cipher text. By using the provided frequency tool on the site, our cipher text's frequency chart looks like this:</p>
+              <img src="img/pic10.png" class="img-fluid">
+              <p class="text-justify">However, this does not match the frequency that's to be expected in a transposition cipher. So, I moved on to the next suggestion which is a substitution cipher. The guideline here is to calculate the cipher's <strong>Index of Coincidence (I.C.)</strong>. This is a measure of how similar a frequency distribution is to the uniform distribution. If this value is around 0.06 then it's a good sign this is a substitution cipher. I plugged the cipher into an I.C. calculator to get the following:</p>
+              <img src="img/pic11.png" class="img-fluid">
+              <p class="text-justify">With an I.C. of 0.062 I decided to treat this as a substitution cipher. As I thought about it, it hit me that when a teacher is sick a substitute is needed. This is how it ties in with the challenge title! I pulled up a substitution cihpher decrypter, plugged in the cipher, and got the decrypted message:</p>
+              <p><code>HISTORY OF HACKTHEBOX HACKTHEBOX WENT LIVE SOME TIME IN MAY OF 2017. SINCE THEN, IT HAS GROWN VERY QUICKLY TO THOUSANDS OF MEMBERS FROM ALL OVER THE GLOBE. THE HALL OF FAME LISTS THE TOP 100 USERS IN ORDER OF POINTS. AT THE TIME OF WRITING, THE TOP 3 USERS ARE STEFANO118, FILLIPOS AND AHMED. THERE ARE SOME FORUMS, A SHOUTBOX AND A SLACK CHANNEL. SLACK AND SHOUTBOX ARE AWESOME, BUT THE FORUMS NEED SOME LOVE! I WISH MORE PEOPLE USED THEM. HOPEFULLY THIS IS ENOUGH TEXT TO HELP WITH YOUR SUBSTITUTION! GET CRACKIN! PS DON'T FORGET TO SUPPORT HACKTHEBOX IF YOU CAN SPARE SOME MONEY. EVERY PENNY HELPS! XOXO - ARREXEL FLAG LOREMIPSUMDOLORSITAMET</code></p>
+              <p class="text-justify">And there's the flag! However, it didn't work when I first entered it. I entered again, but ciphered, and that didn't work either. I then tried all lower case and that did the trick - challenge completed!</p>
           </div>
         </div>
       </div>
